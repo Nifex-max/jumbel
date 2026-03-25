@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>All Seasons Nail Spa</title>
+
+<link rel="icon" type="image/png" href="favicon.jpeg">
+
+<style>
+body {
+    font-family: "Georgia", serif;
+    background: linear-gradient(to bottom, #ffe6f0, #fff0f5);
+    margin: 0;
+    color: #5a3e4d;
+}
+
+/* 🌸 Header with animation */
+header {
+    text-align: center;
+    padding: 80px 20px;
+    background: url("background.jpg") center/cover no-repeat;
+    position: relative;
+    color: white;
+    animation: headerZoom 2.5s ease forwards;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 182, 193, 0.4);
+    backdrop-filter: blur(2px);
+}
+
+header h1, header p {
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 50px;
+}
+
+/* ✨ Header animation */
+@keyframes headerZoom {
+    0% { transform: scale(1.1); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Container */
+.container {
+    padding: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    color: #cc6699;
+}
+
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+.gallery img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(255,153,204,0.8);
+}
+
+/* Services */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #fff;
+    margin: 10px 0;
+    padding: 14px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+ul li:hover {
+    transform: scale(1.05);
+    background: #ffe6f0;
+}
+
+/* Boxes */
+.box {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #ffe6f0;
+    border-radius: 15px;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, select, textarea {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ff99cc;
+}
+
+button {
+    background-color: #ff99cc;
+    border: none;
+    padding: 12px;
+    border-radius: 20px;
+    color: white;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #ff66a3;
+    transform: scale(1.05);
+}
+
+/* 🕒 Hours Layout */
+.hours-section {
+    display: flex;
+    align-items: stretch;
+    gap: 25px;
+}
+
+.hours-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+    border-radius: 20px;
+    position: relative;
+    background: white;
+    overflow: hidden;
+}
+
+/* 💅 Animated border */
+.hours-text::before {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #ff99cc, #ff66a3, #ffcce0, #ff99cc);
+    z-index: -1;
+    animation: borderGlow 6s linear infinite;
+}
+
+.hours-text::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    background: white;
+    z-index: -1;
+}
+
+@keyframes borderGlow {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+/* ✨ Sparkles */
+.hours-text span {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #ff99cc;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: sparkle 4s linear infinite;
+}
+
+.hours-text span:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
+.hours-text span:nth-child(2) { top: 80%; left: 70%; animation-delay: 1s; }
+.hours-text span:nth-child(3) { top: 40%; left: 90%; animation-delay: 2s; }
+.hours-text span:nth-child(4) { top: 70%; left: 10%; animation-delay: 3s; }
+
+@keyframes sparkle {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.5); opacity: 1; }
+    100% { transform: scale(0); opacity: 0; }
+}
+
+.hours-text p {
+    margin: 6px 0;
+}
+
+/* Image */
+.hours-image {
+    flex: 1;
+    display: flex;
+}
+
+.hours-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* Map */
+.map {
+    margin-top: 15px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hours-section {
+        flex-direction: column;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #ffcce0;
+    margin-top: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🌸 All Seasons Nail Spa 🌸</h1>
+    <p>Where beauty blooms in every season 💅✨</p>
+</header>
+
+<div class="container">
+
+<h2>✨ Our Work ✨</h2>
+<div class="gallery">
+    <img src="nail1.jpg">
+    <img src="nail2.jpg">
+    <img src="nail3.jpg">
+    <img src="nail4.jpg">
+    <img src="nail5.jpg">
+    <img src="nail6.jpg">
+    <img src="nail7.jpg">
+    <img src="nail8.jpg">
+    <img src="nail9.jpg">
+    <img src="nail10.jpg">
+    <img src="nail11.jpg">
+    <img src="nail12.jpg">
+    <img src="nail13.jpg">
+    <img src="nail14.jpg">
+    <img src="nail15.jpg">
+    <img src="nail16.jpg">
+</div>
+
+<h2>💖 Our Services 💖</h2>
+<ul>
+    <li>Nail Fill-In</li>
+    <li>Hand Nail Fill-In</li>
+    <li>Toe Nail Fill-In</li>
+    <li>Hand and Toe Nail Fill-In</li>
+    <li>Manicure</li>
+    <li>Pedicure</li>
+    <li>Manicure and Pedicure</li>
+    <li>Nail Polish Change</li>
+    <li>Hand Polish Change</li>
+    <li>Toe Polish Change</li>
+    <li>Hand and Toe Polish Change</li>
+    <li>Nail Polish Removal</li>
+    <li>Hand Polish Removal</li>
+    <li>Toe Polish Removal</li>
+    <li>Hand and Toe Polish Removal</li>
+    <li>Nail Repair</li>
+</ul>
+
+<div class="box">
+<h2>💅 Book an Appointment</h2>
+<form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="tel" placeholder="Phone Number" required>
+
+    <select required>
+        <option value="">Select Service</option>
+        <option>Nail Fill-In</option>
+        <option>Hand Nail Fill-In</option>
+        <option>Toe Nail Fill-In</option>
+        <option>Hand and Toe Nail Fill-In</option>
+        <option>Manicure</option>
+        <option>Pedicure</option>
+        <option>Manicure and Pedicure</option>
+        <option>Nail Polish Change</option>
+        <option>Hand Polish Change</option>
+        <option>Toe Polish Change</option>
+        <option>Hand and Toe Polish Change</option>
+        <option>Nail Polish Removal</option>
+        <option>Hand Polish Removal</option>
+        <option>Toe Polish Removal</option>
+        <option>Hand and Toe Polish Removal</option>
+        <option>Nail Repair</option>
+    </select>
+
+    <input type="date" required>
+    <input type="time" required>
+
+    <textarea placeholder="Special requests (optional)"></textarea>
+
+    <button type="submit">✨ Book Now ✨</button>
+</form>
+</div>
+
+<div class="box">
+<div class="hours-section">
+
+<div class="hours-text">
+<span></span><span></span><span></span><span></span>
+<h2>🕒 Working Hours</h2>
+<p>Mon: 1:00 PM - 7:00 PM</p>
+<p>Tue: 10:00 AM - 7:30 PM</p>
+<p>Wed: 10:00 AM - 7:30 PM</p>
+<p>Thu: 10:00 AM - 7:30 PM</p>
+<p>Fri: 10:00 AM - 7:30 PM</p>
+<p>Sat: 9:00 AM - 7:00 PM</p>
+<p>Sun: 11:00 AM - 6:00 PM</p>
+</div>
+
+<div class="hours-image">
+    <img src="salon.jpg">
+</div>
+
+</div>
+</div>
+
+<div class="box">
+<h2>📞 Contact & Location</h2>
+<p><b>Phone:</b> (469) 640 - 1711</p>
+<p><b>Address:</b> 1208 E Bethany Dr Ste 5 Allen, TX 75002</p>
+
+<div class="map">
+<iframe 
+src="https://www.google.com/maps?q=1208+E+Bethany+Dr+Ste+5+Allen+TX+75002&output=embed"
+width="100%" height="300" style="border:0;" loading="lazy">
+</iframe>
+</div>
+</div>
+
+</div>
+
+<footer>
+<p>✨ All Seasons Nail Spa ✨</p>
+</footer>
+
+</body>
+</html>
+
